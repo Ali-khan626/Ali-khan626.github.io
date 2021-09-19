@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Hackathon</title>
+
+        <!-- FIREBASE CDN -->
+        <script defer src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+        <script defer src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+        <script defer src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+
+        <!-- MATERIALIZE CDN -->
+
+        <!-- Compiled and minified CSS -->
+        <link
+        rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+        <!-- Compiled and minified JavaScript -->
+        <script defer src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+        <!-- GOOGLE FONT -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+        href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1 class="center-align   text-black" style= "color: black; font-family: sans-serif letter-spacing: 0.5vw; font-size: 6vw">Pop a Balloon</h1>
+        <div class="row">
+            <div class="input-field col s4 offset-s4">
+                <input id="email" type="email" class="validate">
+                <label style="color: black;" class="active" for="email">Email</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s4 offset-s4">
+                <input id="password" type="password" class="validate">
+                <label style="color: black;" class="active" for="password">Password</label>
+            </div>
+            <div class="col s4 offset-s4 red-text">
+                <p id="error"></p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s4 offset-s4 center-align">
+                <a style="color: black;"  class="waves-effect waves-light btn-large blue " onclick="signIn();">LogIn</a>
+            </div>
+        </div>
+        <div class="row">
+            <div
+                class="col s4 offset-s4 center-align">
+                <!-- Modal Trigger -->
+                <a style="color: black;" class="waves-effect waves-light btn modal-trigger btn-large blue" style="width: 100%;" href="#modal1">SignUp</a>
+            </div>
+        </div>
+
+
+        <!-- Modal Structure -->
+        <div id="modal1" class="modal center-align">
+            <div class="modal-content">
+                <h4 class="pink-text">Create Account</h4>
+                <div class="row">
+                    <div class="col s12 input-field"><input id="username" type="text" class="validate">
+                        <label class="active" for="username">UserName</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s12 input-field"><input id="useremail" type="email" class="validate">
+                        <label class="active" for="useremail">Email</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s12 input-field"><input id="userpassword" type="password" class="validate">
+                        <label class="active" for="userpassword">Password</label>
+                    </div>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <div class="row">
+                    <div class="col s12 center-align">
+                        <a style="color: black;" href="#!" class=" modal-close waves-effect waves-light btn modal-trigger btn-large blue" style="width: 50%;" onclick="signUp();">Create</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script defer src="./script.js"></script>
+    </body>
+</html>

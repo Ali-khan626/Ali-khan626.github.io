@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Home</title>
+
+        <!-- FIREBASE CDN -->
+        <script defer src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+        <script defer src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+        <script defer src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+
+        <!-- Compiled and minified CSS -->
+        <link
+        rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+        <!-- Compiled and minified JavaScript -->
+        <script defer src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+        <link rel="stylesheet" href="style.css">
+
+    </head>
+    <body>
+
+        <nav>
+            <div class="nav-wrapper">
+                <a href="#" class="brand-logo">
+                    <span id="user"></span>
+                </a>
+                <ul id="nav-mobile" class="right">
+                    <li>
+                        <a onclick="signOut();">Sign Out</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div id="content">
+            <div>
+                <h1>Lives:
+                    <span id="lives">3</span>
+                </h1>
+            </div>
+            
+            <div>
+                <h3 >Score: <span id="score">0</span></h3>
+            </div>
+
+
+        </div>
+
+        <h3 class="center-align blue-text">pop the <span id="pop" style="font-weight: bolder; color: black;"></span> ballons by moving your mouse over them</h3>
+        <div class="wrapper">
+
+
+            <div class="wrapper">
+                
+            <div id="yay-no-balloons">
+                <span class="blue">Wow!</span>
+                All balloons popped!</div>
+            <div id="balloon-gallery">
+                <div class="balloon"></div>
+                <div class="balloon"></div>
+                <div class="balloon"></div>
+                <div class="balloon"></div>
+                <div class="balloon"></div>
+                <div class="balloon"></div>
+                <div class="balloon"></div>
+                <div class="balloon"></div>
+                <div class="balloon"></div>
+                <div class="balloon"></div>
+                <div class="balloon"></div>
+                <div class="balloon"></div>
+                <div class="balloon"></div>
+                <div class="balloon"></div>
+                <div class="balloon"></div>
+                <div class="balloon"></div>
+                <div class="balloon"></div>
+                <div class="balloon"></div>
+                <div class="balloon"></div>
+                <div class="balloon"></div>
+                <div class="balloon"></div>
+                <div class="balloon"></div>
+                <div class="balloon"></div>
+                <div class="balloon"></div>
+                <div class="balloon"></div>
+            </div>
+
+        </div>
+
+
+        <script defer src="./home.js"></script>
+    </body>
+</html>
